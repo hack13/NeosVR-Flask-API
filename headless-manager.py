@@ -136,6 +136,16 @@ def sessionid(headless):
     except:
         return jsonify({"error":"Invalid Request"})
 
+# Save the world
+@app.route('/save/<headless>')
+@auth.login_required
+def save(headless):
+    try:
+        eheadless = f"{escape(headless)}"
+        headlessManager(f'{eheadless}', 'save')
+        feedback = getResponse(f'{eheadless}', 2)
+        return jsonify({"server":f"{eheadless}","world":f"{feedback[0]}","state":f"{feedback[1]}"})
+
 # Get list of worls on headless server
 @app.route('/worlds/<headless>')
 @auth.login_required
