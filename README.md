@@ -15,6 +15,6 @@ python3 -m pip install --user -r requirements.txt
 This is a simple project to make things smoother for myself, but some others have said they wanna use it
 
 ### Todo List
-- [] Add POST request support for Description and World Name
-- [] Look at switching away from waitress (not everyone uses a reverse proxy in front of their API Hack...)
-- [] Look at maybe making my life easier by using Glitfur's NeosVR-API Python Wrapper...
+- [ ] Add POST request support for Description and World Name
+- [ ] Look at switching away from waitress (not everyone uses a reverse proxy in front of their API Hack...)
+- [ ] Look at maybe making my life easier by using Glitfur's NeosVR-API Python Wrapper...
