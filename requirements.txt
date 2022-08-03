@@ -1,0 +1,6 @@
+psutil
+flask
+flask_httpauth
+markupsafe
+waitress
+werkzeug
