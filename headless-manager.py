@@ -145,6 +145,8 @@ def save(headless):
         headlessManager(f'{eheadless}', 'save')
         feedback = getResponse(f'{eheadless}', 2)
         return jsonify({"server":f"{eheadless}","world":f"{feedback[0]}","state":f"{feedback[1]}"})
+    except:
+        return jsonify({"error":"Invalid Request"})
 
 # Get list of worls on headless server
 @app.route('/worlds/<headless>')
