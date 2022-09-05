@@ -40,12 +40,12 @@ def verify_token(token):
 
 # Define the function to execute commands
 def headlessManager(headless, command, opts=''):
-	safeToProceed = True
-	if(safeToProceed == True):
-    		subprocess.run([f"echo {command} {opts} | socat EXEC:'docker attach {headless}',pty STDIN"], shell=True)
-	else:
-		subprocess.run([f"echo status | socat EXEC:'docker attach {headless}',pty STDIN"], shell=True)
-		subprocess.run([f"echo {command} {opts} | socat EXEC:'docker attach {headless}',pty STDIN"], shell=True)
+    safeToProceed = True
+    if(safeToProceed == True):
+        subprocess.run([f"echo {command} {opts} | socat EXEC:'docker attach {headless}',pty STDIN"], shell=True)
+    else:
+        subprocess.run([f"echo status | socat EXEC:'docker attach {headless}',pty STDIN"], shell=True)
+        subprocess.run([f"echo {command} {opts} | socat EXEC:'docker attach {headless}',pty STDIN"], shell=True)
 
 # Get response from container
 def getResponse(headless, lines):
