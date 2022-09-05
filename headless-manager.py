@@ -318,7 +318,7 @@ def afr(headless, username):
     try:
         eusername = f"{escape(username)}"
         eheadless = f"{escape(headless)}"
-        headlessManager(f'{eheadless}', 'afr', f'{eusername}')
+        headlessManager(f'{eheadless}', 'acceptFriendRequest', f'{eusername}')
         feedback = getResponse(f'{eheadless}', 2)
         return jsonify({"server":f"{eheadless}","world":f"{feedback[0]}","state":f"{feedback[1]}"})
     except:
